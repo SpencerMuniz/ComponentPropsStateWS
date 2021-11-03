@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import "./SuperHeroTable.css"
 class SuperHeroTable extends Component{
     constructor(props){
         super(props)
@@ -29,9 +29,19 @@ class SuperHeroTable extends Component{
                 {this.state.superheroes.map(function(superTable){
                     return (
                         <div>
-                            <table>{superTable.name}</table>
-                            <table>{superTable.primary_ability}</table>
-                            <table>{superTable.secondary_ability}</table>
+                            <table>
+                            <tr>
+                                <th>Hero Name</th>
+                                <th>Hero Primary Ability</th>
+                                <th>Hero Secondary Ability</th>
+                            </tr>
+                            <tr>
+                                <td>{superTable.name}</td>
+                                <td>{superTable.primary_ability}</td>
+                                <td>{superTable.secondary_ability}</td>
+                            </tr>
+
+                            </table>
                         </div>
                     )
                 })}
